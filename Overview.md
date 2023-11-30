@@ -60,7 +60,7 @@ Tone.js was initially developed in 2014 by Yotam Mann as a project to help autom
 
 ## 5. Why did you select this package/library?
 
-I selected this library because I've always been a fan of digital music production and wanted to use the Exploration Activity to learn how this type of software worked from a developer's perpsective. The library uses Javascript primarily which was a language that I wanted to explore further and even gave me an oppotunity to learn some HTML and CSS as programs that use Tone.js need to be ran in a web environment. The documentation for the library was informative and provided lots of useful code snippets to build off of which made the intial design for my project straightforward. After watching a quick tutorial combining JavaScript and HTML to represent a button in a browser I was curious to learn more about the library [5].
+I selected this library because I've always been a fan of digital music production and wanted to use the Exploration Activity to learn how this type of software worked from a developer's perpsective. The library uses Javascript primarily which was a language that I wanted to explore further and even gave me an oppotunity to learn some HTML and CSS as programs that use Tone.js need to be ran in a web environment. The documentation for the library was informative and provided lots of useful code snippets to build off of which made the intial design for my project straightforward. After watching a quick tutorial combining JavaScript and HTML to represent a button in a browser I was curious to learn more about the library [6].
 
 ## 6. How did learning the package/library influence your learning of the language?
 
