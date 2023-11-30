@@ -2,7 +2,7 @@
 # ExplorationActivity2
 ## 1. Which package/library does the sample program demonstrate?
 
-This exploration activity demonstrates the functionality of the Tone.js Web Audio framework [1] using programs written in JavaScript and HTML.
+This exploration activity demonstrates the functionality of the Tone.js Web Audio framework using programs written in JavaScript and HTML [1].
 
 ## 2. How does someone run your program?
 
@@ -14,9 +14,10 @@ After the installation is complete, open the index.html file with any browser of
 
 ## 3. What purpose does your program serve?
 
-The purpose of this program is to explore the pitch of musical notes and also how a group of musical notes with certain intervals can create a chord. The program features an interactive piano which includes all of the notes in an octave and allows the user to play creative melodies with a variety of sythesizer tones. The other component of the program is a random chord generator which takes individual music notes and constructs a chord. They can be played either as a full chord or as an arpeggio which plays the individual notes that construct a chord. 
+The purpose of this program is to explore the pitch of musical notes and also how a group of musical notes with certain intervals can create a chord. Everything is represented in a browser environemnt with interactive buttons to allow the user to easily access the program's features. The program features an interactive piano which includes all of the notes in an octave and allows the user to play creative melodies with a variety of sythesizer tones. The other component of the program is a random chord generator which takes individual music notes and constructs a chord. They can be played either as a full chord or as an arpeggio which plays the individual notes that construct a chord. 
 
 ## 4. What would be some sample input/output?
+__Refer to the Interface.png file for a visual representation of the buttons__
 
 a) Click the "Randomize" button:
  - *Randomly selects a chord for the program to interact with and prints the notes that make up that chord*
