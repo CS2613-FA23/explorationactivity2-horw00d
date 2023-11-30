@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tone.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.8.26/build/Tone.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #randomContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #acContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #pianoContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #instrumentContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #randomDisplay {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        #btnChord {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnArpeg {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #42db34;
+            color: #fff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnSynth {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff2222;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnRandom {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff229f;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnC {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        #btnCs {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnD {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnDs {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnE {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnF {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnFs {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnG {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnGs {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnA {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnAs {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnB {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #btnChord:hover {
+            background-color: #2980b9;
+        }
+
+        #btnSynth:hover {
+            background-color: #a63131;
+        }
+
+        #btnArpeg:hover {
+            background-color: #38ab2d
+        }
+
+        #btnRandom:hover {
+            background-color: #75395b
+        }
+
+        #btnC:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnCs:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnD:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnDs:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnE:hover {
+            background-color: #a2a2a2;
+        }
+        
+        #btnF:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnFs:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnG:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnGs:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnA:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnAs:hover {
+            background-color: #a2a2a2;
+        }
+
+        #btnB:hover {
+            background-color: #a2a2a2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Musical Synth Simulator using Tone.js</h1>
+    <ul>
+        <li><strong>Randomize:</strong> Chooses a random chord from A-G</li>
+        <li><strong>Chord:</strong> Plays all the notes of the random chord</li>
+        <li><strong>Arpeggio:</strong> Plays the notes of the random chord separately</li>
+        <li><strong>Keys:</strong> Play individual notes like a piano</li>
+        <li><strong>Change Synth:</strong> Change the synth keyboard the notes play on the piano</li>
+    </ul>
+    <div id="randomContainer">
+        <button id="btnRandom">Randomize</button>
+        <div id="randomDisplay"> </div>
+    </div>
+    <div id="acContainer">
+        <button id="btnChord">Chord</button>
+        <button id="btnArpeg">Arpeggio</button>
+    </div>
+    <div id="pianoContainer">
+        <button id="btnC">C</button>
+        <button id="btnCs">C#</button>
+        <button id="btnD">D</button>
+        <button id="btnDs">D#</button>
+        <button id="btnE">E</button>
+        <button id="btnF">F</button>
+        <button id="btnFs">F#</button>
+        <button id="btnG">G</button>
+        <button id="btnGs">G#</button>
+        <button id="btnA">A</button>
+        <button id="btnAs">A#</button>
+        <button id="btnB">B</button>
+    </div>
+    <div id="instrumentContainer">
+        <button id="btnSynth">Change Synth</button>
+    </div>
+    <script src="EA2.js"></script>
+</body>
+</html>
